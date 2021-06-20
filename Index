@@ -1,0 +1,252 @@
+index.html
+
+<! DOCTYPE html >
+
+< html  xmlns = " http://www.w3.org/1999/xhtml " >
+
+< cabeza >
+
+< meta  charset = " utf-8 " />
+< meta  http-equiv = " Content-Type " content = " text / html; charset = utf-8 " />
+< meta  name = " generator " content = " pandoc " />
+
+
+
+
+< título > Inicio </ título >
+
+< script  src = " site_libs / jquery-1.11.3 / jquery.min.js " > </ script >
+< meta  name = " viewport " content = " width = device-width, initial-scale = 1 " />
+< link  href = " site_libs / bootstrap-3.3.5 / css / united.min.css " rel = " stylesheet " />
+< script  src = " site_libs / bootstrap-3.3.5 / js / bootstrap.min.js " > </ script >
+< script  src = " site_libs / bootstrap-3.3.5 / shim / html5shiv.min.js " > </ script >
+< script  src = " site_libs / bootstrap-3.3.5 / shim / respond.min.js " > </ script >
+< script  src = " site_libs / navigation-1.1 / tabsets.js " > </ script >
+< link  href = " site_libs / highlightjs-9.12.0 / textmate.css " rel = " stylesheet " />
+< script  src = " site_libs / highlightjs-9.12.0 / highlight.js " > </ script >
+< link  href = " site_libs / font-awesome-4.5.0 / css / font-awesome.min.css " rel = " stylesheet " />
+
+< style  type = " text / css " > código { espacio en blanco : pre;} </ style >
+< style  type = " text / css " >
+  pre : no ([ clase ]) {
+    color de fondo : blanco;
+  }
+</ estilo >
+< script  type = " text / javascript " >
+if  ( ventana . hljs )  {
+  hljs . configurar ( { idiomas : [ ] } ) ;
+  hljs . initHighlightingOnLoad ( ) ;
+  if  ( document . readyState  &&  document . readyState  ===  "complete" )  {
+    ventana . setTimeout ( function ( )  {  hljs . initHighlighting ( ) ;  } ,  0 ) ;
+  }
+}
+</ script >
+
+
+
+< style  type = " text / css " >
+h1 {
+  tamaño de fuente :  34 px ;
+}
+h1 . título {
+  tamaño de fuente :  38 px ;
+}
+h2 {
+  tamaño de fuente :  30 px ;
+}
+h3 {
+  tamaño de fuente :  24 px ;
+}
+h4 {
+  tamaño de fuente :  18 px ;
+}
+h5 {
+  tamaño de fuente :  16 px ;
+}
+h6 {
+  tamaño de fuente :  12 px ;
+}
+. tabla  th : no ([ alinear ]) {
+  alineación de texto : izquierda;
+}
+</ estilo >
+
+
+</ cabeza >
+
+< cuerpo >
+
+< style  type = " text / css " >
+. main-container {
+  ancho máximo :  940 px ;
+  margen izquierdo : automático;
+  margen derecho : automático;
+}
+código {
+  color : heredar;
+  color de fondo :  rgba ( 0 ,  0 ,  0 ,  0.04 );
+}
+img {
+  ancho máximo : 100 % ;
+  altura : auto;
+}
+. tabbed-panel {
+  padding-top :  12 px ;
+}
+botón . code-fold-btn : focus {
+  esquema : ninguno;
+}
+</ estilo >
+
+
+< style  type = " text / css " >
+/ * relleno para la barra de navegación de arranque * /
+cuerpo {
+  padding-top :  51 px ;
+  fondo acolchado :  40 px ;
+}
+/ * posición de desplazamiento de desplazamiento para enlaces de anclaje (para barra de navegación fija) * /
+. sección  h1 {
+  padding-top :  56 px ;
+  margen superior :  -56 px ;
+}
+
+. sección  h2 {
+  padding-top :  56 px ;
+  margen superior :  -56 px ;
+}
+. sección  h3 {
+  padding-top :  56 px ;
+  margen superior :  -56 px ;
+}
+. sección  h4 {
+  padding-top :  56 px ;
+  margen superior :  -56 px ;
+}
+. sección  h5 {
+  padding-top :  56 px ;
+  margen superior :  -56 px ;
+}
+. sección  h6 {
+  padding-top :  56 px ;
+  margen superior :  -56 px ;
+}
+</ estilo >
+
+< guión >
+// administrar el estado activo del menú en función de la página actual
+$ ( documento ) . listo ( función  ( )  {
+  // ancla de menú activa
+  href  =  ventana . ubicación . nombre de ruta
+  href  =  href . substr ( href . lastIndexOf ( '/' )  +  1 )
+  si  ( href  ===  "" )
+    href  =  "index.html" ;
+  var  menuAnchor  =  $ ( 'a [href = "'  +  href  +  '"]' ) ;
+
+  // marcarlo como activo
+  menuAnchor . padre ( ) . addClass ( 'activo' ) ;
+
+  // si tiene un menú de la barra de navegación principal, márquelo como activo también
+  menuAnchor . más cercano ( 'li.dropdown' ) . addClass ( 'activo' ) ;
+} ) ;
+</ script >
+
+
+< div  class = " container-fluid main-container " >
+
+<! - tabsets ->
+< guión >
+$ ( documento ) . listo ( función  ( )  {
+  ventana . buildTabsets ( "TOC" ) ;
+} ) ;
+</ script >
+
+<! - código plegable ->
+
+
+
+
+
+
+< div  class = " navbar navbar-inverse navbar-fixed-top " role = " navigation " >
+  < div  class = " contenedor " >
+    < div  class = " navbar-header " >
+      < button  type = " button " class = " navbar-toggle collapsed " data-toggle = " collapse " data-target = " #navbar " >
+        < span  class = " icon-bar " > </ span >
+        < span  class = " icon-bar " > </ span >
+        < span  class = " icon-bar " > </ span >
+      </ botón >
+      < Una  clase = " barra de navegación de la marca " href =" index.html " > SU SITIO WEB </ a >
+    </ div >
+    < div  id = " navbar " class = " navbar-collapse collapse " >
+      < ul  class = " nav navbar-nav " >
+        < li >
+  < Un  href = " index.html " >
+    < span  class = " fa fa-home " > </ span >
+     
+    Casa
+  </ a >
+</ li >
+< li >
+  < Un  href = " about.html " >
+    < span  class = " fa fa-user " > </ span >
+     
+    Acerca de
+  </ a >
+</ li >
+< li >
+  < Un  href = " analysis.html " >
+    < span  class = " fa fa-heart " > </ span >
+     
+    Análisis
+  </ a >
+</ li >
+      </ ul >
+      < ul  class = " nav navbar-nav navbar-right " >
+        
+      </ ul >
+    </ div > <! - /. nav-collapse ->
+  </ div > <! - /. contenedor ->
+</ div > <! - /. navbar ->
+
+< div  class = " fluid-row " id = " header " >
+
+
+
+< h1  class = " title toc-ignore " > Inicio </ h1 >
+
+</ div >
+
+
+
+
+
+
+
+</ div >
+
+< guión >
+
+// agregar estilos de tabla de bootstrap a tablas de pandoc
+function  bootstrapStylePandocTables ( )  {
+  $ ( 'tr.header' ) . padre ( 'thead' ) . padre ( 'tabla' ) . addClass ( 'tabla condensada en tabla' ) ;
+}
+$ ( documento ) . listo ( función  ( )  {
+  bootstrapStylePandocTables ( ) ;
+} ) ;
+
+
+</ script >
+
+<! - carga mathjax dinámicamente para compatibilidad con autocontenido ->
+< guión >
+  ( función  ( )  {
+    var  script  =  documento . createElement ( "secuencia de comandos" ) ;
+    guión . type  =  "texto / javascript" ;
+    guión . src   =  "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" ;
+    documento . getElementsByTagName ( "cabeza" ) [ 0 ] . appendChild ( secuencia de comandos ) ;
+  } ) ( ) ;
+</ script >
+
+</ cuerpo >
+</ html >
